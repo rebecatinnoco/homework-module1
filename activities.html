@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Lynk external CSS -->
+    <link rel="stylesheet" href="style.css"> 
 </head>
-<body>
-    
+<body id="activities">
 
 <!-- top of the page -->
     
 <div id="container">
-    <header>
+<header>
   <!--  <img src="images-2/cliff_ocean.jpg" alt="Ocean View Cliff" width="1280" height="564"> -->
 
 <div class="main-header">
@@ -20,20 +21,18 @@
 <div class="logo">
     <img src="images-2/logo.png" alt="Great Cliffs Logo" width="125">
     
-</div>
-
-    <section>
+    <nav class="main-menu">
     <ul id="link">
-        <li class="link">
-            <p>Home</p>
-        <li class="link">
-            <p>Cliffs</p>
-        <li class="link">
-            <p>Activities</p>
-        <li class="link">
-            <p>Contact</p>
+        <li><a href="index.html">Home</a> </li>
+        <li>Cliffs </li>
+        <li class="active"><a href="activities.html">Activities</a> </li>
+        <li><a href="contact.html">Contact</a> </li>
     </ul>
-    </section>
+    </nav>
+</div>
+</div>
+</header>
+</div>
 
     <!-- half of the page -->
 
@@ -45,7 +44,7 @@
    
     <main>
      <!-- Create a table-->
-    <table border="1">
+    <table>
     <caption>Activities at the Cliffs</caption>
         <thead>
             <tr>
@@ -95,18 +94,22 @@
             </tbody>
         </table>
         </main>
-
-    
-
-        <ul>
-            <li><h3>Partner 1 image</h3></li>
-            <li><h3>Partner 2 image</h3></li>
-            <li><h3>Partner 3 image</h3></li>
-            <li><h3>Partner 4 image</h3></li>
-            <li><h3>Partner 5 image</h3></li>
-            <li><h3>Partner 6 image</h3></li>
-        </ul>
-
+        <section>
+            <ul id="partners">
+                <li class="partner">
+                    <img src="images-2/partners/partner-bustour.png" alt="Partner Bus Tours">
+                <li class="partner">
+                    <img src="images-2/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                <li class="partner">
+                    <img src="images-2/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                <li class="partner">
+                    <img src="images-2/partners/partner-collegetours.png" alt="Partner College Tours">
+                <li class="partner">
+                    <img src="images-2/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+                <li class="partner">
+                    <img src="images-2/partners/partner-tourgroup.png" alt="Partner Tour Group">
+            </ul>
+            </section>
 <!-- end of the page -->
 
 <footer>
