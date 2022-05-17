@@ -254,21 +254,38 @@ input[type=submit] {
     margin-left: 405px;
 }
 /* Cliffs */
-/*#cliffs section {
-    width: 12x;
-    background-color: white;
-    padding: 2em 0 2em 0;
-    margin: 0 auto;
-    text-align: center;
-}
-section #cliff .cliff {
+#cliff .cliff {
     display: inline-block;
-    margin: 0 0.75em;
-    padding: 1.3em 1.5em;
-    background-color: #fff;
-    border-radius: 50%;
+    margin: 0.75em 0.75em 0.75em 0.75em;
+    background-color: white;
+    width: 12x;
+    text-align: center;
+    padding-left: 4em;
 }
-section #cliff .cliff img {
+#cliff .cliff img {
     width: 400px;
-    height: 300px;
-}*/
+    height: 200px;
+}
+#cliff div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  #cliff div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  #cliff div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #cliff div.desc {
+    padding: 15px;
+    text-align: center;
+    text-underline-position: above;
+    background-color: #902917;
+    color: white;
+    font-weight: bold;
+  }
