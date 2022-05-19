@@ -32,9 +32,14 @@
 </div>
 </header>
 </div>
+<section id="timeofday">
+    <span> Your Current Local Time</span>
+    <span id="clock"></span>
+</section>
 
 <!-- half of the page -->
 
+<main>
 <h1>Introducing California's Greatest Cliffs</h1>
 <h2>What is so unique about California cliffs?</h2>
 <p>California cliffs are one of a kind in the United States where no cliffs are as magnificent and beautiful as them. And California is the only state that have cliffs that fronts all possible environments: sea, river, mountains and canyons. There are four such individual unique cliffs: West Cliff, North Cliff, East Cliff and South Cliff. All offer fantastic overlooking views, recreational areas, camping sites, wildlife watch spots and overnight cabins.</p>       
@@ -57,7 +62,7 @@
             <img src="images-2/partners/partner-tourgroup.png" alt="Partner Tour Group">
     </ul>
 </section>
-
+</main>
 <!-- end of the page -->
 
 <footer>
@@ -75,7 +80,28 @@
     <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
     </div>
 </footer>
+<!--JavaScript Codes-->
+<script>
+//Create a time data function
+function currentTime() {
+    //Declare Variables
+    var d = new Date(); //Get current Date
+    var hr = d.getHours(); //Get Current hours
+    var min = d.getMinutes(); //Get current minutes
+    var sec = d.getSeconds(); //Get current Seconds
+    var ampm; //Declare empty variable to store AM or PM
+
+    //Add 0 to single digits for seconds
+    if (sec < 10) {
+        sec = "0"+ sec;
+    }
+    //Add 0 to single digits for minutes
+    if (min < 10) {
+        min = "0" + min;
+    }
+</script>
+
 </body>
 </html>
-    <title>: <meta charset="utf-8"> </title>
+<title>: <meta charset="utf-8"> </title>
 </head>
