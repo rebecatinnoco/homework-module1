@@ -95,7 +95,7 @@ function currentTime() {
     //Add 0 to single digits for seconds
     if (sec < 10) {
         sec = "0"+ sec;
-    }
+    };
     //Add 0 to single digits for minutes
     if (min < 10) {
         min = "0" + min;
@@ -111,21 +111,36 @@ function currentTime() {
         ampm = " AM"; //Set to AM //Added space before to separate from the time
     }
 
-    //Assemble time format to display
-    var time = hr + ":" + min + ":" + sec + ampm; //adding the space was giving error
-
-    //Display current local time and time zone on HTML elements
-    document.getElementById("clock").innerText = time; //adding time
-
-    //Run time data function every 1 second
-    setInterval(currentTime, 1000); //Setting timer
-
     var utchr = d.getUTCHours(); //Get current Greenwich Mean Time (GMT)
     var timeDiff; //To store time difference between GMT hour and local hour
     var adjTimeDiff; //To store time difference converted to positive number
+
+    if (timeDiff < 0) {
+        adjTimeDiff = timeDiff + 24;
+    } else {
+        adjTimeDiff = timeDiff;
+    }
+
     var timeZone; //To store the 4 time zone (PT,MT,CT,ET)
+    if (adjTimeDiff == 4) {
+        timeZone = " ET";
+    } else if (adjTimeDiff == 5) {
+        timeZone = " CT";
+    } else if (adjTimeDiff == 6) {
+        timeZone == " MT";
+    } else if (adjTimeDiff == 7) {
+        timeZone == " PT";
+    }
+
+//Assemble time format to display
+var time = hr + ":" + min + ":" + sec + ampm + timeZone; //adding the space was giving error
+
+//Display current local time and time zone on HTML elements
+document.getElementById("clock").innerText = time; //adding time
 
 
+//Run time data function every 1 second
+setInterval(currentTime, 1000); //Setting timer
 }
 
 //Initial run of time data function
@@ -134,5 +149,3 @@ currentTime();
 
 </body>
 </html>
-<!-- <title>: <meta charset="utf-8"> </title> 
-</head> -->
