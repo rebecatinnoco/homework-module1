@@ -33,6 +33,8 @@
     margin: 0 2em 0 0;
     float:left;
 }
+
+
 /* Naviagation */
 .main-menu {
     margin-left:227px;
@@ -80,10 +82,27 @@ p {
     padding-left:6em;
     padding-right: 6em;
 }
+
+
 /* Partners */
 section {
     width: 100%;
     background-color: #4288c3;
+}
+/* clock */
+
+#home #timeofday {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: small;
+    color: #3a3a3a;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: rgb(255,214,108);
+    background: linear-gradient(0deg, rgba(255,215,139,1) 18%, rgba(255,235,154,1) 29%, rgba(255,233,150,1) 33%, rgba(0,212,255,1) 81%);
+}
+#home #timeofday #clock {
+    color: #125688;
 }
 section #partners {
     width: 1200px;

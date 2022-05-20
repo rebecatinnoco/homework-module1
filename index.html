@@ -33,7 +33,7 @@
 </header>
 </div>
 <section id="timeofday">
-    <span> Your Current Local Time</span>
+    <span> Your Current Local Time: </span>
     <span id="clock"></span>
 </section>
 
@@ -78,8 +78,9 @@
     </div>
     <div id="disclaimer">
     <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
-    </div>
 </footer>
+</div>
+
 <!--JavaScript Codes-->
 <script>
 //Create a time data function
@@ -105,24 +106,33 @@ function currentTime() {
         ampm - "PM"; //Set to PM
     } else if ( hr > 12) {
         hr -=12; //Deduct 12 from hours greater tthan 12 (military time)
-        ampm = "PM"; //Set to PM
+        ampm = " PM"; //Set to PM //Added space before to separate from the time
     } else {
-        ampm = "AM"; //Set to AM
+        ampm = " AM"; //Set to AM //Added space before to separate from the time
     }
 
     //Assemble time format to display
-    var time = hr + ":" + min + ":" + sec " " + ampm;
+    var time = hr + ":" + min + ":" + sec + ampm; //adding the space was giving error
 
     //Display current local time and time zone on HTML elements
     document.getElementById("clock").innerText = time; //adding time
+
+    //Run time data function every 1 second
+    setInterval(currentTime, 1000); //Setting timer
+
+    var utchr = d.getUTCHours(); //Get current Greenwich Mean Time (GMT)
+    var timeDiff; //To store time difference between GMT hour and local hour
+    var adjTimeDiff; //To store time difference converted to positive number
+    var timeZone; //To store the 4 time zone (PT,MT,CT,ET)
+
+
 }
 
 //Initial run of time data function
 currentTime();
-
 </script>
 
 </body>
 </html>
-<title>: <meta charset="utf-8"> </title>
-</head>
+<!-- <title>: <meta charset="utf-8"> </title> 
+</head> -->
