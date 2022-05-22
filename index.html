@@ -112,13 +112,15 @@ function currentTime() {
     }
 
     var utchr = d.getUTCHours(); //Get current Greenwich Mean Time (GMT)
+    utchr -=12;
+
     var timeDiff = utchr - hr; //To store time difference between GMT hour and local hour
     var adjTimeDiff; //To store time difference converted to positive number
 
         if (timeDiff < 0) {
             adjTimeDiff = timeDiff + 12;
         } else {
-            adjTimeDiff = timeDiff - 12;
+            adjTimeDiff = timeDiff;
         }
 
     var timeZone; //To store the 4 time zone (PT,MT,CT,ET)
