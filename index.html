@@ -103,7 +103,7 @@ function currentTime() {
 
     //Determine AM or PM string
     if (hr == 12) {
-        ampm - "PM"; //Set to PM
+        ampm = " PM"; //Set to PM
     } else if ( hr > 12) {
         hr -=12; //Deduct 12 from hours greater tthan 12 (military time)
         ampm = " PM"; //Set to PM //Added space before to separate from the time
@@ -112,14 +112,14 @@ function currentTime() {
     }
 
     var utchr = d.getUTCHours(); //Get current Greenwich Mean Time (GMT)
-    var timeDiff; //To store time difference between GMT hour and local hour
+    var timeDiff = utchr - hr; //To store time difference between GMT hour and local hour
     var adjTimeDiff; //To store time difference converted to positive number
 
-    if (timeDiff < 0) {
-        adjTimeDiff = timeDiff + 24;
-    } else {
-        adjTimeDiff = timeDiff;
-    }
+        if (timeDiff < 0) {
+            adjTimeDiff = timeDiff + 12;
+        } else {
+            adjTimeDiff = timeDiff;
+        }
 
     var timeZone; //To store the 4 time zone (PT,MT,CT,ET)
     if (adjTimeDiff == 4) {
