@@ -48,7 +48,7 @@
 <!-- Partners -->   
 <section>
     <ul id="partners">
-        <li class="partner">
+       <!-- <li class="partner">
              <img src="images-2/partners/partner-bustour.png" alt="Partner Bus Tours">
         <li class="partner">
             <img src="images-2/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
@@ -59,7 +59,7 @@
         <li class="partner">
             <img src="images-2/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
         <li class="partner">
-            <img src="images-2/partners/partner-tourgroup.png" alt="Partner Tour Group">
+            <img src="images-2/partners/partner-tourgroup.png" alt="Partner Tour Group">-->
     </ul>
 </section>
 </main>
@@ -134,7 +134,6 @@ function currentTime() {
         timeZone = " PT";
     }
     
-
 //Assemble time format to display
 var time = hr + ":" + min + ":" + sec + ampm + timeZone; //adding the space was giving error
 
@@ -148,6 +147,25 @@ setInterval(currentTime, 1000); //Setting timer
 
 //Initial run of time data function
 currentTime();
+
+//partners
+var photo = [];
+var fileNames = [];
+var imageList = [];
+var image;
+var openList = "<li id='photo'>";
+var closeList = "</li>"
+
+//loop
+for (var i=0; i<6; i++) {
+    fileNames.push ("partner"+(i+1));
+    photo.push ("<img src='images-2/partners/"+fileNames[i]+".png'>")
+    image = openList + photo[i] + closeList;
+    imageList.push(image)
+}
+
+//Display the images
+document.getElementById("partners").innerHTML = imageList;
 </script>
 
 </body>

@@ -89,6 +89,26 @@ section {
     width: 100%;
     background-color: #4288c3;
 }
+section #partners {
+    width: 1200px;
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    text-align: center;
+}
+section #partners img {
+    margin: 0 0.75em;
+    padding: 1.3em 1.5em;
+    background-color: #fff;
+    border-radius: 50%;
+}
+section #partners img {
+    width: 90px;
+    height: 90px;
+}
+section #photo {
+    list-style-type: none;
+    display: inline-block;
+}
 /* clock */
 
 #home #timeofday {
@@ -104,23 +124,7 @@ section {
 #home #timeofday #clock {
     color: #125688;
 }
-section #partners {
-    width: 1200px;
-    padding: 2em 0 2em 0;
-    margin: 0 auto;
-    text-align: center;
-}
-section #partners .partner {
-    display: inline-block;
-    margin: 0 0.75em;
-    padding: 1.3em 1.5em;
-    background-color: #fff;
-    border-radius: 50%;
-}
-section #partners .partner img {
-    width: 90px;
-    height: 90px;
-}
+
 /* Footer */
 footer {
     width: 100%;
