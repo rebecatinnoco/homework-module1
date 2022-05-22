@@ -105,7 +105,7 @@ function currentTime() {
     if (hr == 12) {
         ampm = " PM"; //Set to PM
     } else if ( hr > 12) {
-        hr -=12; //Deduct 12 from hours greater tthan 12 (military time)
+        hr -=12; //Deduct 12 from hours greater than 12 (military time)
         ampm = " PM"; //Set to PM //Added space before to separate from the time
     } else {
         ampm = " AM"; //Set to AM //Added space before to separate from the time
@@ -118,7 +118,7 @@ function currentTime() {
         if (timeDiff < 0) {
             adjTimeDiff = timeDiff + 12;
         } else {
-            adjTimeDiff = timeDiff;
+            adjTimeDiff = timeDiff - 12;
         }
 
     var timeZone; //To store the 4 time zone (PT,MT,CT,ET)
@@ -127,10 +127,11 @@ function currentTime() {
     } else if (adjTimeDiff == 5) {
         timeZone = " CT";
     } else if (adjTimeDiff == 6) {
-        timeZone == " MT";
+        timeZone = " MT";
     } else if (adjTimeDiff == 7) {
-        timeZone == " PT";
+        timeZone = " PT";
     }
+    
 
 //Assemble time format to display
 var time = hr + ":" + min + ":" + sec + ampm + timeZone; //adding the space was giving error
