@@ -85,6 +85,11 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
         <label>How did you hear about us:</label>  
         <textarea></textarea>
     </div>
+    <!-- Random Codes -->
+    <div class="randomcode">
+        <input type="text" name="randomcode" placeholder="Enter characters">
+        <p id="codes"></p>
+    </div>
     <div class="button">
         <input type="submit" value="Inquire">
     </div> 
@@ -126,26 +131,8 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
     </div>
 </footer>
 
-<!--JavaScript-->
-<script>
-    //partners
-    var photo = [];
-    var fileNames = [];
-    var imageList = [];
-    var image;
-    var openList = "<li id='photo'>";
-    var closeList = "</li>"
-    
-    //loop
-    for (var i=0; i<6; i++) {
-        fileNames.push ("partner"+(i+1));
-        photo.push ("<img src='images-2/partners/"+fileNames[i]+".png'>")
-        image = openList + photo[i] + closeList;
-        imageList.push(image)
-    }
-    
-    //Display the images
-    document.getElementById("partners").innerHTML = imageList;
-</script>
+<!-- Partners Codes-->
+<script src="js/site_scripts.js"></script>
+
 </body>
 </html>

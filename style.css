@@ -268,7 +268,7 @@ textarea {
     resize: none;
 }
 input[type=submit] {
-    background-color: #4977D1;
+    /*background-color: #4977D1;*/
     color: white;
     padding: 12px 20px;
     border: none;
