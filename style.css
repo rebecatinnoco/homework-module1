@@ -270,11 +270,28 @@ textarea {
 input[type=submit] {
     /*background-color: #4977D1;*/
     color: white;
-    padding: 12px 20px;
     border: none;
     cursor: pointer;
     width: 100px;
+    height: 40px;
     margin-left: 405px;
+    margin-top: 10px;
+}
+div #codes {
+    color: black;
+    background-color: gray;
+    padding: 5px 50px;
+    width: 20px;
+    height: 50px;
+    display: inline;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+input[name=randomcode] {
+    width: 200px;
+    margin-left: 187px;
+    display: inline;
+    margin-top: 10px;
 }
 /* Cliffs */
 #cliff .cliff {
