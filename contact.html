@@ -10,7 +10,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body id="contact">
+<body id="contact" onLoad="disableButton(true)">
 
 <!-- top of the page -->
     
@@ -87,11 +87,11 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
     </div>
     <!-- Random Codes -->
     <div class="randomcode">
-        <input type="text" name="randomcode" placeholder="Enter characters">
-        <p id="codes"></p>
+        <input id="codeentered" type="text" name="randomcode" placeholder="Enter characters">
+        <div id="codes"></div>
     </div>
     <div class="button">
-        <input type="submit" value="Inquire">
+        <input id="submit" value="Inquire">
     </div> 
 </fieldset>  
 </form>

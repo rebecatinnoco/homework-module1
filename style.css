@@ -33,8 +33,6 @@
     margin: 0 2em 0 0;
     float:left;
 }
-
-
 /* Naviagation */
 .main-menu {
     margin-left:227px;
@@ -267,8 +265,8 @@ textarea {
     height: 150px;
     resize: none;
 }
-input[type=submit] {
-    /*background-color: #4977D1;*/
+input[id=submit] {
+    background-color: #4977D1;
     color: white;
     border: none;
     cursor: pointer;
@@ -276,16 +274,18 @@ input[type=submit] {
     height: 40px;
     margin-left: 405px;
     margin-top: 10px;
+    text-align: center;
 }
+/*random codes*/
 div #codes {
-    color: black;
-    background-color: gray;
-    padding: 5px 50px;
-    width: 20px;
-    height: 50px;
+    padding: 5px 12px;
+    width: 5px;
+    height: 70px;
     display: inline;
     margin-left: 10px;
     margin-top: 10px;
+    font-weight: lighter;
+    background-color: gray;
 }
 input[name=randomcode] {
     width: 200px;
@@ -320,7 +320,6 @@ input[name=randomcode] {
     width: 100%;
     height: auto;
   }
-  
   #cliff div.desc {
     padding: 15px;
     text-align: center;
