@@ -50,7 +50,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>Hiking</td>
+                <td class = "red" id = "pid">Hiking</td>
                 <td>College Hikes</td>
                 <td>Family Fun</td>
                 <td>Treasure Trails</td>
@@ -124,6 +124,17 @@
 
 <!-- Partners Codes-->
 <script src="js/site_scripts.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type = "text/javascript" >
+$(document).ready(function(){
+
+$(document).bind("click", function(e){
+    $(e.target).closest("td").toggleClass("highlight");
+    })  
+})
+</script>
+
 
 </body>
 </html>

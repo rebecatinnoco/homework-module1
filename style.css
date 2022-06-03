@@ -276,6 +276,9 @@ input[id=submit] {
     margin-top: 10px;
     text-align: center;
 }
+/* jQuery */
+.highlight { color:white; background: green; font-weight: bold;}
+
 /*random codes*/
 div #codes {
     padding: 5px 12px;
