@@ -7,8 +7,11 @@
     <title>Activities</title>
     <!--Lynk external CSS -->
     <link rel="stylesheet" href="style.css"> 
-     <!-- Font Awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type = "text/javascript"></script>
 </head>
 <body id="activities">
     
@@ -50,39 +53,39 @@
         </thead>
         <tbody>
             <tr>
-                <td class = "red" id = "pid">Hiking</td>
-                <td>College Hikes</td>
-                <td>Family Fun</td>
-                <td>Treasure Trails</td>
-                <td>Canyon Explorer</td>
+                <td >Hiking</td>
+                <td class="table">College Hikes</td>
+                <td class="table">Family Fun</td>
+                <td class="table">Treasure Trails</td>
+                <td class="table">Canyon Explorer</td>
             </tr>
             <tr>
                 <td>Kayak</td>
-                <td>Western Kayak Meetup</td>
+                <td class="table">Western Kayak Meetup</td>
                 <td>Not Available</td>
-                <td>Youth Kayaking</td>
-                <td>Kayak Down</td>
+                <td class="table">Youth Kayaking</td>
+                <td class="table">Kayak Down</td>
             </tr>
             <tr>
                 <td>Skydiving</td>
-                <td>Seacliff Diving</td>
-                <td>Sky is the limit	</td>
+                <td class="table">Seacliff Diving</td>
+                <td class="table">Sky is the limit	</td>
                 <td>Not Available</td>
-                <td>Sky Diving for Beginners</td>
+                <td class="table">Sky Diving for Beginners</td>
             </tr>
             <tr>
                 <td>Biking</td>
-                <td>Bicycle for One</td>
+                <td class="table">Bicycle for One</td>
                 <td>Not Available</td>
-                <td>Bike Meetup Group</td>
+                <td class="table">Bike Meetup Group</td>
                 <td>Not Available</td>
             </tr>
             <tr>
                 <td>Camping</td>
-                <td>Youth Camp</td>
-                <td>Rent a Tent</td>
-                <td>Campground Adventure</td>
-                <td>Sunset Camping</td>
+                <td class="table">Youth Camp</td>
+                <td class="table">Rent a Tent</td>
+                <td class="table">Campground Adventure</td>
+                <td class="table">Sunset Camping</td>
             </tr>
         </tbody>
     </table>
@@ -125,16 +128,14 @@
 <!-- Partners Codes-->
 <script src="js/site_scripts.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type = "text/javascript" >
 $(document).ready(function(){
 
 $(document).bind("click", function(e){
-    $(e.target).closest("td").toggleClass("highlight");
+    $(e.target).closest(".table").toggleClass("highlight");
     })  
-})
+});
+
 </script>
-
-
 </body>
 </html>

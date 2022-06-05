@@ -277,7 +277,7 @@ input[id=submit] {
     text-align: center;
 }
 /* jQuery */
-.highlight { color:white; background: green; font-weight: bold;}
+.highlight { color:white; background: rgb(24, 240, 24); font-weight: bold;}
 
 /*random codes*/
 div #codes {
