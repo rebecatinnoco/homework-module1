@@ -40,7 +40,7 @@
 <p>There are many planned activities at all the cliff sites. Some are scheduled daily, weekly, monthly and yearly. These activities are not however run by the state park and recreational department. They are operated and manage by private vendors but are partners with the state department. Therefore, for schedule inquiries or information, please contact them directly. For a list of activities, please refer to the table below:</p>
 <main>
 <!-- Create a table-->
-    <table>
+    <table id="mytable">
     <caption>Activities at the Cliffs</caption>
         <thead>
             <tr>
@@ -89,7 +89,15 @@
             </tr>
         </tbody>
     </table>
-
+    <div id="displaySelected">
+        <div id="result">
+            <h4>My selected activities to enquire</h4>
+        </div>
+        <div id="sendinfo">
+            <input type="email" placeholder="johndoe@gmail.com">
+            <button>Get Info</button>
+        </div>
+    </div>
  <!-- Partners --> 
     <section>
     <ul id="partners">
@@ -130,10 +138,42 @@
 
 <script type = "text/javascript" >
 $(document).ready(function(){
+    //select grides
+    $(document).bind("click", function(e){
+        $(e.target).closest(".table").toggleClass("highlight");
+    });
 
-$(document).bind("click", function(e){
-    $(e.target).closest(".table").toggleClass("highlight");
-    })  
+    //user interation with table cells
+    $(document).ready(function() {
+        $("td").click(function () {
+            var content = $(this).text();
+            var cliff = ["west cliff","north cliff","east cliff","south cliff"]
+            var row_index = $(this).parent().index();
+            var col_index = $(this).index();
+            var test = $("#mytable").find("th").eq(col_index).html();
+            
+            
+
+            if (content != "Not available") {
+                $(this).toggleClass("tdhighlight");
+
+                if ($(this).hasClass("tdhighlight")) {
+                    $('#displaySelected').css("visibility","visible");
+                    $('#displaySelected').css("margin-top","2em");
+                    $('#result').append("<p>"+content+" at "+ test +"</p>");
+
+                } else {
+                    $('#result p:contains('+content+')').remove();
+
+                    if ($('#result').has('p').lenght == false) {
+                        $('#displaySelected').css("visibility","hidden");
+                        $('#displaySelected').css("margin-top","0");
+                    };
+                };
+            };
+
+        });
+    });
 });
 
 </script>
