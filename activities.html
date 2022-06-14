@@ -154,7 +154,7 @@ $(document).ready(function(){
             
             
 
-            if (content != "Not available") {
+            if (content != "Not Available") {
                 $(this).toggleClass("tdhighlight");
 
                 if ($(this).hasClass("tdhighlight")) {
@@ -165,7 +165,7 @@ $(document).ready(function(){
                 } else {
                     $('#result p:contains('+content+')').remove();
 
-                    if ($('#result').has('p').lenght == false) {
+                    if ($('#result').has('p').length == false) {
                         $('#displaySelected').css("visibility","hidden");
                         $('#displaySelected').css("margin-top","0");
                     };

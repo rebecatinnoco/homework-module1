@@ -15,7 +15,7 @@ for (var i=0; i<6; i++) {
 }
 
 //Display the images
-document.getElementById("partners").innerHTML = imageList;
+document.getElementById("partners").innerHTML = imageList.join("");
 
 
 /* ----- RANDOM CODES ------- */
