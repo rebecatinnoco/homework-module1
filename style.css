@@ -272,7 +272,7 @@ table {
 #activities main #result {
     min-height: 50px;
     width: 300px;
-    padding: 0;
+    padding-right: 2px;
 }
 #activities main #result p {
     padding: 0;
@@ -314,19 +314,33 @@ table {
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
-#contact fieldset {
+#contact fieldset {/*
     border-color: #9ed034;
     width: 1000px;
     margin: 0 auto 1em 6em;
-    width: 1000px;
+    
+    border-width: 2px;*/
+    margin: 30px auto 0 auto;
+
+}
+.f1 {
+    border-style: solid;
+    width: 100px 100%;
+    margin-bottom: 30px;
+    margin-left: 90px;
+    border-color: #9ed034;
+    
+    /*margin: 0 auto 1em 6em;*/
+    
 }
 #contact form {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 #contact label {
     display: block;
-    margin: 15px 0 0 0;
+    /*margin: 15px 0 0 0;*/
 }
 input {
     width: 500px;

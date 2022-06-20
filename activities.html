@@ -47,7 +47,7 @@
 <p>There are many planned activities at all the cliff sites. Some are scheduled daily, weekly, monthly and yearly. These activities are not however run by the state park and recreational department. They are operated and manage by private vendors but are partners with the state department. Therefore, for schedule inquiries or information, please contact them directly. For a list of activities, please refer to the table below:</p>
 <main>
 <!-- Create a table-->
-    <table id="mytable">
+    <table id="mytable" type="click" data-toggle="modal" data-target="#myModal">
     <caption style="caption-side: top;">Activities at the Cliffs</caption>
         <thead>
             <tr>
@@ -96,31 +96,46 @@
             </tr>
         </tbody>
     </table>
-    <div id="displaySelected">
+    <!-- <div id="displaySelected">
         <div id="result">
             <h4>My selected activities to enquire</h4>
         </div>
         <div id="sendinfo">
             <input type="email" placeholder="johndoe@gmail.com">
             <button>Get Info</button>
-        </div>
+        </div>  -->
+
+    <!-- The Modal --> 
+    <div id="displaySelected">
+    <div class="modal" id="myModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+            
+    <!-- Modal Header -->
+    <div class="modal-header">
+        <h4 class="modal-title">My selected activities to enquire</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+                
+    <!-- Modal body -->
+    <div id="result" class="modal-body" style="margin-right:300px;">
+    </div>
+                
+     <!-- Modal footer -->
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Back to Activities</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Get Info</button>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
  <!-- Partners --> 
     <section>
     <ul id="partners">
-       <!-- <li class="partner">
-            <img src="images-2/partners/partner-bustour.png" alt="Partner Bus Tours">
-        <li class="partner">
-            <img src="images-2/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
-        <li class="partner">
-            <img src="images-2/partners/partner-campingadv.png" alt="Partner Camping Adventure">
-        <li class="partner">
-            <img src="images-2/partners/partner-collegetours.png" alt="Partner College Tours">
-        <li class="partner">
-            <img src="images-2/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
-        <li class="partner">
-            <img src="images-2/partners/partner-tourgroup.png" alt="Partner Tour Group"> -->
-        </ul>
+    </ul>
     </section>
 </main>
 <!-- end of the page -->
