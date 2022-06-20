@@ -70,10 +70,49 @@ function evaluteCode() {
 //Activate button
 disableButton();
 
-///* ----- JQuery Activities ------- */
-$(document).ready(function(){
+// /* ----- JQuery Activities ------- */
+// $(document).ready(function(){
 
-    $(document).bind("click", function(e){
-        $(e.target).closest("td").toggleClass("highlight");
-        });  
+//     $(document).bind("click", function(e){
+//         $(e.target).closest("td").toggleClass("highlight");
+//         });  
+//     });
+
+    $(document).ready(function(){
+        //select grides
+        $(document).bind("click", function(e){
+            $(e.target).closest(".table").toggleClass("highlight");
+        });
+    
+        //user interation with table cells
+        $(document).ready(function() {
+            $("td").click(function () {
+                var content = $(this).text();
+                var cliff = ["west cliff","north cliff","east cliff","south cliff"]
+                var row_index = $(this).parent().index();
+                var col_index = $(this).index();
+                var test = $("#mytable").find("th").eq(col_index).html();
+                
+                
+    
+                if (content != "Not Available") {
+                    $(this).toggleClass("tdhighlight");
+    
+                    if ($(this).hasClass("tdhighlight")) {
+                        $('#displaySelected').css("visibility","visible");
+                        $('#displaySelected').css("margin-top","2em");
+                        $('#result').append("<p>"+content+" at "+ test +"</p>");
+    
+                    } else {
+                        $('#result p:contains('+content+')').remove();
+    
+                        if ($('#result').has('p').length == false) {
+                            $('#displaySelected').css("visibility","hidden");
+                            $('#displaySelected').css("margin-top","0");
+                        };
+                    };
+                };
+    
+            });
+        });
     });

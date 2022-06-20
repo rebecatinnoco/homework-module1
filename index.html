@@ -9,32 +9,7 @@
     <link rel="stylesheet" href="style.css"> 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-<style>
-    /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 599px) {
-  #partners {grid-template-columns: repeat(1, 1fr);}
-  #textx {grid-template-columns: repeat(1, 1fr);}
-}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  #partners {grid-template-columns: repeat(2, 1fr);}
-  #textx {grid-template-columns: repeat(1, 1fr);}
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    #partners {grid-template-columns: repeat(3, 1fr);;}
-    #textx {grid-template-columns: repeat(2, 1fr);}
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    #partners {grid-template-columns: repeat(6, 1fr);}
-    #textx {grid-template-columns: repeat(2, 1fr);}
-} 
-
-</style>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -43,41 +18,27 @@
     <!-- top of the page -->
 
 <div id="container">
-<header>
-    <!-- <img src="images-2/cliff_ocean.jpg" alt="Ocean View Cliff" width="1280" height="564"> -->  
-<div class="main-header">
-    <div class="logo">
-    <img src="images-2/logo.png" alt="Great Cliffs Logo" >      
-    </div>
-<!--<nav class="main-menu">
-    <ul>
-    <li class="active"><a href="index.html">Home</a> </li>
-    <li><a href="cliffs.html">Cliffs</a> </li>
-    <li><a href="activities.html">Activities</a> </li>
-    <li><a href="contact.html">Contact</a> </li>
-    </ul>  
-</nav>-->
-<nav class="main-menu navbar navbar-expand-md navbar-light">
-    <!--<a class = "navbar-brand"></a>-->
-    <a class = "navbar-brand"></a>
-    <button class = "navbar-toggler" type = "button" data-toggle = "collapse"
-    data-target = "#navbarContent"
-    aria-controls = "navbarContent   bg-light" aria-expanded = "false"
-    aria-label = "Toggle navigation">
-  
-    <span class = "navbar-toggler-icon"></span>
+
+<nav class="main-menu navbar sticky-top navbar-expand-lg navbar-light">
+     <div class="container-fluid main-header">
+        <a class="navbar-brand logo" href="#">
+        <img src="images-2/logo.png" alt="Great Cliffs Logo" >  
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse " id = "navbarContent">
-    <ul class = "navbar-nav navb">
-        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="cliffs.html">Cliffs</a></li>
-        <li lass="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a><a></li>
-    </ul>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link text-white" aria-current="page" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="cliffs.html">Cliffs</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="activities.html">Activities</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
     </div>
 </nav>
-</div>
+<header>
 </header>
 </div>
 <section id="timeofday">
